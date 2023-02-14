@@ -7,6 +7,7 @@ const Collection = ({ collection, fetchCards }) => {
     return (
         <div onClick={handleClick}>
             {collection.title}
+            
         
         </div>
     )
