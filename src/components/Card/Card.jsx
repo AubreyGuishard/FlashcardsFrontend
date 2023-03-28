@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 const Card = ({ card }) => {
     const [isFlipped, setIsFlipped] = useState(false);
 
@@ -6,6 +6,9 @@ const Card = ({ card }) => {
         setIsFlipped(!isFlipped)
     }
 
+    useEffect(() => {
+        setIsFlipped(false)
+    }, [card])
   return card && <div onClick={handleClick}>{isFlipped ? card.definition : card.word}</div>;
 };
 

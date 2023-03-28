@@ -17,13 +17,27 @@ const CardContainer = ({activeCollectionId}) => {
 
   useEffect(() => {
     fetchCardsForCollection()
+    setIndex(0)
   }, [activeCollectionId])
+
+  function handlePrev(){
+    if (index > 0){
+      setIndex(index -1)
+    }
+  }
+  
+  function handleNext(){
+    if (index < cards.length - 1){
+      setIndex(index + 1)
+    }
+
+  }
   return <div>
-    <div>1/5</div>
+    <div>{index+1}/{cards.length}</div>
     <div>
-      <button>PREV</button>
+      <button onClick={handlePrev}>PREV</button>
       <Card card={activeCard}/>
-      <button>NEXT</button>
+      <button onClick={handleNext}>NEXT</button>
     </div>
   </div>;
 };
