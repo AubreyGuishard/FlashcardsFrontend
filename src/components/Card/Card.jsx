@@ -1,10 +1,6 @@
-import React from 'react';
-const Card = ({card}) => {
-    return ( 
-        <div>
-            {card.word} {card.definition}
-        </div>
-     );
-}
- 
+import React from "react";
+const Card = ({ card }) => {
+  return card && <div>{card.word}</div>;
+};
+
 export default Card;
