@@ -35,9 +35,9 @@ const CardContainer = ({activeCollectionId}) => {
   return <div>
     <div>{index+1}/{cards.length}</div>
     <div>
-      <button onClick={handlePrev}>PREV</button>
-      <Card card={activeCard}/>
       <button onClick={handleNext}>NEXT</button>
+      <Card card={activeCard}/>
+      <button onClick={handlePrev}>PREV</button>
     </div>
   </div>;
 };
