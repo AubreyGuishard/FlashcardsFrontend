@@ -8,26 +8,27 @@ import CardContainerCollection from "./components/CardContainer/CardContainer";
 
 function App() {
   const [cardCollections, setCardCollections] = useState([]);
+  const [activeCollectionId, setActiveCollectionId] = useState(0);
+  console.log("Active Collection Id:", activeCollectionId)
   
   useEffect(() => {
     fetchFlashCardCollections();
-  },[]);
-  
+  }, []);
+
   async function fetchFlashCardCollections() {
     const response = await axios.get("http://127.0.0.1:8000/api/collections/");
     setCardCollections(response.data);
   }
-  
- 
-  console.log(cards)
+
   return (
     <div>
-      <Header/>
+      <Header />
       <CollectionContainer
         collections={cardCollections}
-        fetchCards={fetchCardsForCollection}
+        activeCollectionId={activeCollectionId}
+        setActiveCollectionId={setActiveCollectionId}
       />
-      <CardContainerCollection cards={cards}></CardContainerCollection>
+      <CardContainerCollection></CardContainerCollection>
     </div>
   );
 }

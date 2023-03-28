@@ -1,7 +1,7 @@
 
-const Collection = ({ collection, fetchCards }) => {
+const Collection = ({ collection, activeCollectionId, setActiveCollectionId }) => {
     function handleClick(){
-       fetchCards(collection.id)
+       setActiveCollectionId(collection.id)
     }
     
     return (

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "../Card/Card";
-const CardContainer = ({ cards }) => {
+import axios from "axios";
+const CardContainer = ({}) => {
   const [cards, setCards] = useState([]);
   async function fetchCardsForCollection(collectionId) {
     const response = await axios.get(

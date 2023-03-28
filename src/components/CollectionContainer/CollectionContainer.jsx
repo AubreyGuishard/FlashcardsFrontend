@@ -1,8 +1,17 @@
 import React from "react";
 import Collection from "../Collection/Collection";
-const CollectionContainer = ({ collections, fetchCards }) => {
+
+const CollectionContainer = ({
+  collections,
+  activeCollectionId,
+  setActiveCollectionId,
+}) => {
   const collectionList = collections.map((collection) => (
-    <Collection collection={collection} fetchCards={fetchCards}/>
+    <Collection
+      collection={collection}
+      activeCollectionId={activeCollectionId}
+      setActiveCollectionId={setActiveCollectionId}
+    />
   ));
   return <div>{collectionList}</div>;
 };
