@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 const Card = ({ card }) => {
-  return card && <div>{card.word}</div>;
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    function handleClick(){
+        setIsFlipped(!isFlipped)
+    }
+
+  return card && <div onClick={handleClick}>{isFlipped ? card.definition : card.word}</div>;
 };
 
 export default Card;
