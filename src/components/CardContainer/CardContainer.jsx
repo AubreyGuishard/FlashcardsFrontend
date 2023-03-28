@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../Card/Card";
-const CardContainerCollection = ({ cards }) => {
-  function buildFlashCards() {
-    return cards.map(function (card) {
-      return <Card card={card}/>;
-    });
+const CardContainer = ({ cards }) => {
+  const [cards, setCards] = useState([]);
+  async function fetchCardsForCollection(collectionId) {
+    const response = await axios.get(
+      `http://127.0.0.1:8000/api/collections/${collectionId}/cards/`
+    );
+    setCards(response.data);
   }
 
-  return <div>{buildFlashCards()}</div>;
+
+  return <div></div>;
 };
 
-export default CardContainerCollection;
+export default CardContainer;

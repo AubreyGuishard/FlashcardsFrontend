@@ -8,23 +8,17 @@ import CardContainerCollection from "./components/CardContainer/CardContainer";
 
 function App() {
   const [cardCollections, setCardCollections] = useState([]);
-  const [cards, setCards] = useState([]);
-
+  
   useEffect(() => {
     fetchFlashCardCollections();
   },[]);
-
+  
   async function fetchFlashCardCollections() {
     const response = await axios.get("http://127.0.0.1:8000/api/collections/");
     setCardCollections(response.data);
   }
-
-  async function fetchCardsForCollection(collectionId) {
-    const response = await axios.get(
-      `http://127.0.0.1:8000/api/collections/${collectionId}/cards/`
-    );
-    setCards(response.data);
-  }
+  
+ 
   console.log(cards)
   return (
     <div>
