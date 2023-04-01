@@ -6,10 +6,10 @@ const Collection = ({ collection, activeCollectionId, setActiveCollectionId }) =
     }
     
     return (
-        <section>
-             <div onClick={handleClick}>
+        <section id='collection-section' className='move-left'>
+             <button onClick={handleClick}>
              {collection.title}
-             </div>
+             </button>
          </section> 
             
                        
