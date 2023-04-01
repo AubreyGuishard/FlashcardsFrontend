@@ -6,11 +6,14 @@ const Collection = ({ collection, activeCollectionId, setActiveCollectionId }) =
     }
     
     return (
-        <div onClick={handleClick}>
-            {collection.title}
+        <section>
+             <div onClick={handleClick}>
+             {collection.title}
+             </div>
+         </section> 
             
-        
-        </div>
+                       
+                   
     )
 }
 
