@@ -1,6 +1,8 @@
+import './Header.css'
+
 const Header = ({}) => {
     return ( 
-        <div>FLASHCARDS</div>
+        <h2 className='header'>FLASHCARDS</h2>
      );
 };
  

@@ -1,3 +1,4 @@
+import './Collection.css'
 
 const Collection = ({ collection, activeCollectionId, setActiveCollectionId }) => {
     function handleClick(){
