@@ -7,7 +7,7 @@ const Collection = ({ collection, activeCollectionId, setActiveCollectionId }) =
     
     return (
         <section id='collection-section' className='move-left'>
-             <button onClick={handleClick}>
+             <button onClick={handleClick} className='collection-buttons'>
              {collection.title}
              </button>
          </section> 

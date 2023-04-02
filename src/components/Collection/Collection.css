@@ -5,3 +5,16 @@
 .collection-section{
     border: 5px;
 }
+
+.collection-buttons{
+background-color: lightgray;
+color: black;
+/* size: 10px; */
+}
+
+.collection-buttons:hover{
+    background-color: lightblue;
+    transition: 0.2s;
+    border-color: aquamarine;
+    
+}
