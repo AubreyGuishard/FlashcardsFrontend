@@ -5,6 +5,7 @@ import CollectionContainer from "./components/CollectionContainer/CollectionCont
 import Header from "./components/Header/Header";
 import CardContainerCollection from "./components/CardContainer/CardContainer";
 import CardContainer from "./components/CardContainer/CardContainer";
+import SideBar from "./components/Sidebar/Sidebar";
 // import React from "react";
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
   return (
     <div>
       <Header />
+      <div>
+        {/* <SideBar /> */}
+      </div>
       <CollectionContainer
         collections={cardCollections}
         activeCollectionId={activeCollectionId}

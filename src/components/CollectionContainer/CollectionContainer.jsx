@@ -16,7 +16,7 @@ const CollectionContainer = ({
   return (
     <section>
       <h2 className="align-center">Card Collections</h2>
-      <ul>{collectionList}</ul>
+      <ul id="collection-list">{collectionList}</ul>
     </section>
   );
 };
