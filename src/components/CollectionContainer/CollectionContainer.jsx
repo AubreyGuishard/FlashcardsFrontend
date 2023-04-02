@@ -13,7 +13,12 @@ const CollectionContainer = ({
       setActiveCollectionId={setActiveCollectionId}
     />
   ));
-  return <div>{collectionList}</div>;
+  return (
+    <section>
+      <h2 className="align-center">Card Collections</h2>
+      <ul>{collectionList}</ul>
+    </section>
+  );
 };
 
 export default CollectionContainer;
