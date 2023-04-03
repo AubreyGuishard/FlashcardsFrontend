@@ -24,7 +24,7 @@ const AddNewCard = ({ getFlashCards, cardId }) => {
     setDefinition("");
   }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h3>Add New Card</h3>
       <div>
         <input
