@@ -9,7 +9,7 @@ const Card = ({ card }) => {
     useEffect(() => {
         setIsFlipped(false)
     }, [card])
-  return card && <h3 onClick={handleClick}>{isFlipped ? card.definition : card.word}</h3>;
+  return card && <h3 onClick={handleClick} className="card">{isFlipped ? card.definition : card.word}</h3>;
 };
 
 export default Card;

@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import CardContainerCollection from "./components/CardContainer/CardContainer";
 import CardContainer from "./components/CardContainer/CardContainer";
 import SideBar from "./components/Sidebar/Sidebar";
+import AddNewCard from "./components/AddNewCard/AddNewCard";
 // import React from "react";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         setActiveCollectionId={setActiveCollectionId}
       />
       <CardContainer activeCollectionId={activeCollectionId}/>
+      <AddNewCard/>
     </div>
   );
 }
