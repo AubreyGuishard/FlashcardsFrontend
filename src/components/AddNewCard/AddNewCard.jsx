@@ -27,6 +27,7 @@ const AddNewCard = ({ getFlashCards, cardId }) => {
     <form onSubmit={handleSubmit}>
       <h3>Add New Card</h3>
       <div>
+        <label>Word </label>
         <input
           type="text"
           onChange={(e) => setWord(e.target.value)}
@@ -34,11 +35,12 @@ const AddNewCard = ({ getFlashCards, cardId }) => {
         />
       </div>
       <div>
-      <h3>
+      <h4>
         <div>
+            <label>Definition </label>
             <input type="text" onChange={(e) => setDefinition(e.target.value)} value={definition}/>
         </div>
-      </h3>
+      </h4>
       </div>
       <button type="submit">Add Card</button>
     </form>
