@@ -26,6 +26,7 @@ const AddNewCard = ({ getFlashCards, cardId }) => {
   return (
     <form onSubmit={handleSubmit}>
       <h3>Add New Card</h3>
+      <h4>
       <div>
         <label>Word </label>
         <input
@@ -34,6 +35,7 @@ const AddNewCard = ({ getFlashCards, cardId }) => {
           value={word}
         />
       </div>
+      </h4>
       <div>
       <h4>
         <div>
